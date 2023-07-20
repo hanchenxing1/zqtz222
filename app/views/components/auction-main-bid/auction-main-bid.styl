@@ -1,0 +1,112 @@
+.auction__bar
+  flex 0 0 auto
+  background $backgroundColor
+
+.auction__bar-body
+  flex 0 0 auto
+  height 70px
+  display flex
+  max-width fit-content
+
+.auction__bid-info
+  flex 1
+  display flex
+
+.auction__bid-actions
+  flex 0 0 auto
+  display flex
+  align-items center
+
+.auction__main-input
+  flex 0 0 auto
+  position relative
+  height 100%
+  input
+    border none
+    width 60px
+    height 100%
+    text-align center
+    font-size 20px
+    padding-top 12px
+    background #fafafa
+    font-family 'IBM Plex Mono', monospace
+    &::-webkit-inner-spin-button
+    &::-webkit-outer-spin-button
+      -webkit-appearance none
+      margin 0
+  label
+    absolute top 4px right
+    text-align center
+    width 60px
+    font-size 9px
+    font-weight 300
+    text-transform uppercase
+
+.auction__main-action
+  flex 0 0 auto
+  padding 0 16px
+  .button
+    min-width 150px
+
+.auction__main-timer
+  position relative
+  flex 0 0 60px
+  height 100%
+  display flex
+  justify-content center
+  align-items center
+  user-select none
+
+.auction__text
+  font-weight 600
+  font-size 1.5em
+  display flex
+  align-items center
+  .team__name
+    line-height 1.5em
+
+.MuiButtonGroup-root.winning .MuiButtonGroup-grouped
+  background-color rgb(46, 125, 50)
+  color rgba(255,255,255,0.8)
+
+@media (min-width 800px)
+  .auction__bid-actions
+    height 100%
+    background white
+
+@media (min-width 1100px)
+  .auction__bar-body
+    max-width 1000px
+    margin 0 auto
+
+@media (max-width 1099px)
+  .auction__text
+    padding 0 16px
+
+@media (max-width 799px)
+  .auction__bar
+    display flex
+    align-items center
+    justify-content center
+
+  .auction__bar-body
+    flex-direction column
+    height 120px
+    align-items flex-start
+
+  .auction__bid-actions
+    padding 0 16px 8px
+    justify-content center
+    width 100%
+
+  .auction__bid-info
+    height 105px
+    position relative
+
+  .auction__main-timer
+    border-radius 8px
+    overflow hidden
+
+@media (max-width 400px)
+  .auction__main-timer
+    flex 0 0 30px

@@ -1,0 +1,20 @@
+.player__watchlist-action
+  display flex
+  align-items center
+  cursor pointer
+  .icon
+    width 20px
+
+  &.selected .icon
+    fill $accentColor
+
+body.hide-watchlist
+  .player__watchlist-action
+  .player__watchlist-action.selected
+    opacity 0
+
+@media (pointer: fine)
+  .player__watchlist-action
+    &:hover
+      .icon
+        fill $accentColor

@@ -1,0 +1,35 @@
+$color = lighten(yellow, 92%)
+$cutlistColor = lighten(red, 92%)
+
+.dashboard__players-table
+  .MuiToolbar-root
+    border-bottom 1px solid $borderColor
+  .table__body .table__row .table__cell.metric
+    height 36px
+
+.table__cell.player__item-team
+  min-width 60px
+  padding 6px
+
+.section.waiver
+  background $color
+  .player__item-name.table__cell
+    background $color
+
+.section.cutlist
+  border 1px solid red
+  .dashboard__section-header-title
+    color red
+    display flex
+    align-items center
+  .MuiSvgIcon-root
+    margin 0 6px
+
+.player__item.reordering
+  min-width auto
+
+
+@media (max-width 600px)
+  .dashboard__players-table .player__item-name.table__cell
+    width 116px
+    flex 0 0 116px

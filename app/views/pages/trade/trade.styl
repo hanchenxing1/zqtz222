@@ -1,0 +1,57 @@
+.trade
+  display flex
+  margin-bottom 150px
+
+.trade__main
+  flex 5
+  height 100%
+  padding 0 16px
+
+.trade__head
+  display flex
+  margin-top 16px
+  .trade__box
+    height 300px
+  .trade__box-body
+    height 100%
+    overflow-y scroll
+
+.trade__box
+  background white
+  flex 1
+  display flex
+  flex-direction column
+  margin 8px
+  border-radius 3px
+
+.trade__box-head
+  flex 0 0 auto
+  display flex
+  justify-content center
+  align-items center
+  font-weight 600
+
+.trade__box-body
+  flex 1
+  padding 16px
+  .MuiAutocomplete-root .MuiFormControl-root
+    margin 0
+
+.trade__summary
+  display flex
+
+.trade__offer
+  margin-left 5px
+
+.trade__body
+  margin-top 16px
+
+.trade__action
+  margin 8px
+
+.trade__team-summary
+  padding 8px
+
+@media (max-width 750px)
+  .trade
+    flex-direction column

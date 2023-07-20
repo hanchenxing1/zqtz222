@@ -1,0 +1,83 @@
+.draft__pick
+  background white
+  position relative
+  width 80px
+  margin-right 3px
+  border 1px solid transparent
+  border-radius 6px
+  flex 0 0 auto
+  overflow hidden
+  &.active
+    border-color $accentColor
+
+  &.user
+    background yellow
+
+  &.QB
+    background tint(red, 25%)
+    .draft__pick-num
+    .draft__pick-player-name
+      color white
+  &.WR
+    background tint(orange, 25%)
+  &.RB
+    background tint(green, 25%)
+    .draft__pick-num
+    .draft__pick-player-name
+      color white
+  &.TE
+    background tint(blue, 25%)
+    .draft__pick-num
+    .draft__pick-player-name
+      color white
+  &.K
+    background tint(grey, 25%)
+  &.DST
+    background tint(black, 25%)
+
+.draft__pick-player
+  flex 1
+  padding-left 4px
+
+.draft__pick-player-name
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+  font-weight 900
+  &.last
+    font-size 15px
+  &.first
+    font-size 11px
+    line-height 13px
+
+.draft__pick-num
+  font-weight 600
+  &.formatted
+    absolute top 2px right 4px
+    font-size 10px
+  &.pick
+    absolute top 2px left 4px
+    font-size 12px
+
+.draft__pick-main
+  flex 1
+  padding 24px 0 0
+  display flex
+  flex-direction column
+  height 100%
+  justify-content flex-end
+
+.draft__pick-team
+  font-size 12px
+  flex 0 0 auto
+  background white
+
+.draft__pick-window
+  flex 1
+  padding-left 4px
+  font-size 12px
+  font-weight 800
+  text-transform uppercase
+  color lighten($textColor, 40)
+  &.active
+    color $accentColor

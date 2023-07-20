@@ -1,0 +1,29 @@
+.section
+  margin 16px 0
+  background white
+  border-radius 8px
+  overflow hidden
+  &:not(.expand)
+    max-width fit-content
+  + .section
+    margin-top 16px
+
+.section__summary
+  flex 1
+  color rgba(0, 0, 0, 0.54)
+  text-transform uppercase
+  padding 16px 0 16px
+  font-size 0.675rem
+  text-align left
+  font-family "Inter", "Helvetica", "Arial", sans-serif
+  font-weight 400
+  line-height 1.43
+  caption-side bottom
+  letter-spacing 0.01071em
+  display flex
+  justify-content flex-end
+
+.section__summary-item
+  flex 0 0 auto
+  + .section__summary-item
+    padding 0 16px

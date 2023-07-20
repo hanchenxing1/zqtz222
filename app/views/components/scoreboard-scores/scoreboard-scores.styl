@@ -1,0 +1,19 @@
+.scoreboard__scores
+  display flex
+  padding 32px 16px
+  margin 0 -16px
+  overflow hidden
+  overflow-x scroll
+
+.scoreboard__matchup
+  flex 1
+  padding 8px
+  min-width 160px
+  border-radius 3px
+  background white
+
+  &.selected
+    background lighten(yellow, 93%)
+
+  + .scoreboard__matchup
+    margin-left 16px

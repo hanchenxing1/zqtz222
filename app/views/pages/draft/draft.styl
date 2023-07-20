@@ -1,0 +1,112 @@
+.draft
+  absolute left 0 top 0 right 0 bottom 0
+  display flex
+  flex-direction column
+
+.draft__selected
+  flex 0 0 auto
+  background lighten($backgroundColor, 90%)
+  display flex
+  max-height 150px
+  margin 4px 16px 8px
+  border-radius 10px
+
+.draft__selected-head
+  flex 0 0 auto
+
+.draft__selected-action
+  display flex
+  padding 0 16px 16px
+
+.draft__selected-title
+  font-size 2em
+  font-weight 500
+  padding 16px
+
+.draft__selected-alt
+  padding 0 16px 16px
+  display flex
+  align-items center
+  div
+    display inline-block
+    + div
+      margin-left 8px
+
+.draft__selected-body
+  flex 1
+  overflow hidden
+  overflow-y scroll
+  display flex
+  flex-wrap wrap
+  div
+    flex 1
+    padding 16px
+    font-weight 900
+  label
+    font-size 10px
+    font-weight 500
+    display block
+    color lighten($textColor, 30)
+
+.draft__main
+  flex 4
+  border-left 1px solid $borderColor
+  border-right 1px solid $borderColor
+  display flex
+  flex-direction column
+
+.draft__main-board
+  flex 1
+  border-bottom 1px solid $borderColor
+  display flex
+  height 100%
+
+.draft__main-board-pos
+  flex 1
+  display flex
+  flex-direction column
+  + .draft__main-board-pos
+    border-left 1px solid $borderColor
+
+.draft__main-board-pos-head
+  flex 0 0 auto
+  display flex
+  justify-content center
+  align-items center
+  padding 8px
+  border-bottom 1px solid $borderColor
+
+.draft__main-board-pos-body
+  flex-grow 1
+  min-height 0
+
+.draft__side
+  flex 0 0 auto
+  height 140px
+  display flex
+  flex-direction column
+  width 100%
+
+.draft__side-top
+  flex 0 0 auto
+
+.draft__side-top-pick
+  padding 4px 16px 8px
+  font-size 11px
+  margin 0 auto
+
+.draft__side-top-pick-title
+  font-size 12px
+  padding-bottom 4px
+
+.draft__side-main
+  flex 9
+  padding 8px 16px 16px
+  overflow hidden
+  overflow-x scroll
+  display flex
+  flex-direction row
+
+ @media (max-width 1000px)
+   .draft__main-board-pos:not(.overall)
+     display none

@@ -1,0 +1,105 @@
+.auction__targets
+  height 100%
+  display flex
+  flex-direction column
+
+.auction__targets-head
+  display flex
+  align-items center
+  padding 8px 16px
+  background $backgroundColor
+  border-bottom 1px solid $borderColor
+  .MuiFormControlLabel-label
+    font-size 11px
+    font-weight 200
+  .MuiFormGroup-root
+    margin-right 16px
+
+.auction__targets-body
+  display flex
+  height 100%
+  overflow hidden
+  overflow-x scroll
+
+.auction__targets-column
+  flex 1 1 236px
+  height 100%
+  display flex
+  flex-direction column
+  background white
+  min-width 236px
+  &:first-child
+    padding-left 16px
+  + .auction__targets-column
+    border-left 1px solid $borderColor
+
+.auction__targets-column-body
+  flex 1
+
+.auction__targets-player
+  display flex
+  border-left 4px solid transparent
+  height 30px
+
+  &.optimal
+    border-left 4px solid $accentColor
+
+  &.watchlist
+    background lighten(yellow, 80%)
+
+  &.signed
+    background lighten(green, 80%)
+    font-weight bold
+
+  &.rostered
+    text-decoration line-through
+    color #8f8f8f
+
+  &.nominated
+    background lighten(red, 80%)
+
+  .player__name
+    padding 0 4px
+    overflow hidden
+
+  .player__name-main
+    white-space nowrap
+
+.auction__targets-player .player__watchlist-action
+  opacity 0
+
+@media (pointer:fine)
+  .auction__targets-player:hover .player__watchlist-action
+    opacity 1
+
+.optimal__lineup-key
+  background white
+  border 1px solid $borderColor
+  color $accentColor
+  border-left 4px solid $accentColor
+  height 35px
+  display flex
+  align-items center
+  padding 8px
+  text-transform uppercase
+  margin-left 8px
+  font-size 10px
+  font-weight 800
+
+.auction__targets-player-salary
+  padding 8px
+  flex 0 0 45px
+  display flex
+  justify-content flex-end
+  align-items center
+
+.auction__targets-player-bye
+  flex 0 0 20px
+  font-size 10px
+  display flex
+  align-items center
+  justify-content center
+  color lighten(black, 50%)
+
+.auction__targets-player-meta
+  width 100px

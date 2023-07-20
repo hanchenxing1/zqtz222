@@ -1,0 +1,47 @@
+.selected__player-transactions
+  padding 16px
+  display flex
+  max-width 900px
+  margin 0 auto
+
+  .MuiTableContainer-root
+    background white
+    border-radius 8px
+    margin-bottom 16px
+
+  .MuiTableHead-root .MuiTableCell-sizeSmall
+    font-size 12px
+    font-weight 600
+    font-family 'IBM Plex Mono', monospace
+
+.selected__player-transactions-all
+  flex 1
+
+  .transaction
+    background lighten($backgroundColor, 60%)
+
+.selected__player-transactions-summary
+  flex 0 0 300px
+
+  .MuiTableContainer-root
+    background lighten($backgroundColor, 60%)
+
+  .MuiTableCell-head
+    font-size 12px
+    font-weight 600
+    font-family 'IBM Plex Mono', monospace;
+
+@media (min-width 601px)
+  .selected__player-transactions-summary
+    padding 0 16px
+
+@media (max-width 600px)
+  .selected__player-transactions
+    flex-wrap wrap
+
+  .selected__player-transactions-all
+  .selected__player-transactions-summary
+    flex-basis 100%
+
+  .selected__player-transactions-summary
+    padding-top 16px

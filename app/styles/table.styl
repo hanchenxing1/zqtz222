@@ -1,0 +1,103 @@
+.table__container
+  width 100%
+  overflow-x auto
+
+.table__row
+  width max-content
+  min-width 100%
+  position relative
+  display flex
+  align-items center
+  background white
+
+@media (pointer:fine)
+  .table__body .table__row:hover
+    background #fafafa
+    .player__item-name.table__cell
+      background #eaeaea
+    .player__item-menu
+      display flex
+
+.table__head
+  align-items center
+  height 48px
+  border-bottom 1px solid rgba(224, 224, 224, 1)
+  font-size 11px
+  text-transform uppercase
+  font-weight 500
+
+.table__cell
+  flex 0 0 60px
+  width 60px
+  min-height 24px
+  display flex
+  align-items center
+  padding 6px
+  &.metric
+    justify-content flex-start
+
+  &.text
+    width 150px
+    flex 1 0 150px
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+
+  &.wide_cell
+    width 90px
+    flex 0 0 90px
+
+.table__cell-text
+  text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
+  min-width 48px
+
+.table__head .table__cell
+  height 100%
+  font-size 10px
+  font-weight 600
+  text-transform capitalize
+  line-height 1.43
+
+.table__row:last-child .table__cell
+  border-bottom none
+
+.table__row-summary
+  background #efefef
+  border-bottom 1px solid rgba(224, 224, 224, 1)
+  .table__cell.sticky__column
+    background #efefef
+    justify-content flex-end
+    font-weight 600
+    padding 6px 24px 6px 16px
+
+.table__divider
+  background #e0e0e0
+  display flex
+  justify-content center
+  font-size 9px
+  text-transform uppercase
+  padding 2px 0
+
+.header__row
+  background #eee
+  color rgb(0,0,0)
+  font-weight 700
+  padding 4px 3px
+  font-size 11px
+  font-family 'IBM Plex Mono'
+
+.sticky__column
+  position sticky
+  z-index 1
+  left 0
+  &.table__cell
+    background rgb(248,248,248)
+  &.sticky__two
+    left 60px
+
+.sticky__row
+  position sticky
+  z-index 2
+  top 55px

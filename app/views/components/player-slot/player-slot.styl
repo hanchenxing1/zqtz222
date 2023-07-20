@@ -1,0 +1,52 @@
+.player__slot
+  min-height 55px
+  padding 8px
+  display flex
+  align-items stretch
+
+  &:not(:last-child)
+    border-bottom 1px solid $borderColor
+
+  .player__name-expanded
+    margin-bottom 8px
+
+.player__slot-slotName
+  color rgba(0,0,0,0.4)
+  flex 0 0 48px
+  font-size 12px
+
+.player__slot-player
+  flex 1
+
+.player__slot-right
+  flex 0 0 80px
+  display flex
+  flex-direction column
+
+.player__slot-projected-points
+  flex 1
+  align-items center
+  display flex
+  justify-content flex-end
+  &.metric
+    font-size 24px
+
+.player__slot-projected-stats
+  color rgba(0,0,0,0.5)
+  font-weight 400
+  padding 4px 0
+  font-size 11px
+
+.player__slot-action
+  display flex
+  justify-content flex-end
+
+@media (max-width 600px)
+  .player__slot
+    padding 24px 8px 4px
+    position relative
+
+  .player__slot-slotName
+    flex 0 0 30px
+    position absolute
+    top 4px

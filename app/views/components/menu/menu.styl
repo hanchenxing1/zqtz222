@@ -1,0 +1,115 @@
+$hoverBackground = rgba(255, 255, 255, 0.8)
+$hoverBorder = rgba(0, 0, 0, 0.23)
+
+$menuBackgroundColor = darken($backgroundColor, 5%)
+
+.main__menu
+  absolute left 0 right 0 top 0 bottom 0
+  overflow-y scroll
+  display flex
+  flex-direction column
+
+.league__menu
+  display flex
+  padding-left 32px
+  position relative
+
+.league__title
+  font-family 'IBM Plex Mono'
+  font-size 21px
+  padding-bottom 8px
+  display flex
+  justify-content center
+  padding 16px 8px
+
+.menu__collapse
+  position absolute
+  right 4px
+  bottom 16px
+
+.menu__sections
+  flex 1 0 auto
+  display flex
+  flex-wrap wrap
+  align-content flex-start
+  padding 14px
+  font-family 'Inter', sans-serif
+
+.MuiDrawer-paper.MuiPaper-root.menu__drawer
+  background $menuBackgroundColor
+  width $menuWidth
+  .menu__sections
+    max-width 1100px
+    margin 0 auto
+    padding 16px 24px
+
+.menu__section
+  border-radius 4px
+  min-width 136px
+  background lighten($menuBackgroundColor, 40%)
+  flex 1
+  margin 8px
+  transition background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+
+.menu__links
+  margin-top 8px
+  padding 0 16px 16px
+  a
+    display flex
+    align-items center
+    padding 3px 0
+    font-weight 400
+    font-size 12px
+    line-height 16px
+    &.active
+      font-weight 900
+      color red
+
+.menu__heading
+  padding 16px 16px 0
+  font-weight 600
+  text-transform capitalize
+  font-family 'IBM Plex Mono', monospace
+  display flex
+  align-items center
+  .team__image
+    margin 4px
+    width 30px
+    height 30px
+
+.menu__text
+  font-family 'Montserrat', sans-serif
+  font-size 32px
+  letter-spacing 0.1em
+  margin 48px auto 32px
+  transition color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+
+.menu__open .main__menu-button.MuiFab-root
+  display none
+
+@media (min-width 800px)
+  .MuiDrawer-paper.MuiPaper-root.menu__drawer
+    border-right 1px solid lighten($borderColor, 30%)
+
+@media (pointer: fine)
+  .menu__links a:hover
+  a.menu__text:hover
+    color red
+  .main__menu .MuiToolbar-root a:hover
+    background-color rgba(0,0,0,0.08)
+  .menu__section:hover
+    border-color $hoverBorder
+    background $hoverBackground
+    box-shadow $hoverShadow 4px 4px 0px 0px
+
+@media (max-width 500px)
+  .menu__links a
+    font-size 14px
+    line-height 18px
+    min-height 36px
+
+@media (pointer: coarse)
+  .menu__links a
+    font-size 14px
+    line-height 18px
+    min-height 36px

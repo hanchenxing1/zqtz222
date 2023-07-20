@@ -1,0 +1,20 @@
+.player__row-opponent
+  flex 0 0 90px
+  width 90px
+  overflow hidden
+  display flex
+  align-items center
+  justify-content space-around
+  font-size 11px
+  font-weight 900
+  padding 0 5px
+  &.player__header
+    justify-content center
+    padding 6px
+
+@media (max-width 500px)
+  .player__row-opponent
+    flex 0 0 50px
+    width 50px
+    .nfl__team-logo
+      display none

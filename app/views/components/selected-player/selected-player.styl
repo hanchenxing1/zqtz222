@@ -1,0 +1,175 @@
+.selected__player-paper.MuiDrawer-paper
+  height calc(100% - 64px)
+  border-radius 36px 36px 0 0
+
+.selected__player-header
+  display flex
+  align-items stretch
+  label
+    font-size 10px
+    font-family "Inter", "Helvetica", "Arial", sans-serif;
+    font-weight 300
+    text-transform uppercase
+    display block
+    padding-bottom 6px
+
+  .player__watchlist-action
+    margin 0 16px 0 8px
+
+  .player__name
+    flex 0 0 auto
+
+.selected__player-header-item
+  flex 0 1 10%
+  font-weight 800
+  font-size 16px
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  padding 16px
+  min-width 80px
+
+.selected__player-header-secondary
+  flex 1
+  display flex
+  background white
+
+.selected__player-header-section
+  flex 1
+  display flex
+  flex-wrap wrap
+  justify-content flex-start
+  align-items center
+  overflow hidden
+  .MuiButtonGroup-root
+    margin 0 16px 16px
+  .MuiButton-root
+    font-size 10px
+
+.selected__player-main
+  display flex
+  flex-direction column
+  overflow hidden
+  height 100%
+
+  .TabPanelUnstyled-root
+    height 100%
+    overflow hidden
+    overflow-y scroll
+
+.selected__player-body
+  flex 1
+  background #f0f0f0
+  overflow-y auto
+  -webkit-overflow-scrolling touch
+
+.selected__section
+  padding 16px
+  display flex
+  flex-direction column
+  max-width fit-content
+  margin 0 auto
+  border-radius 10px
+  background white
+  margin-bottom 16px
+  overflow-y scroll
+  &:first-child
+    margin-top 16px
+
+.selected__table
+  height 100%
+  max-width fit-content
+  margin 0 auto
+  overflow scroll
+  padding-bottom 32px
+
+.selected__table-header
+  flex 1
+  display flex
+  align-items stretch
+  font-weight 500
+  border-bottom 1px solid $borderColor
+  font-size 12px
+  min-width fit-content
+  background rgb(245, 245, 245)
+
+  &.sticky
+    position sticky
+    top 0
+    z-index 2
+
+.player__selected-row
+  flex 1
+  display flex
+  height 24px
+  line-height 16px
+  align-items stretch
+  min-width fit-content
+  &:hover
+    background $yellowColor
+
+  &.header
+    border-bottom 1px solid #f0f0f0
+
+  &.POST
+    background lighten(red, 95%)
+
+    .table__cell.game__week
+    .table__cell.game__day
+      background lighten(red, 80%)
+
+  &.PRE
+    background lighten(gray, 96%)
+
+    .table__cell.game__week
+    .table__cell.game__day
+      background lighten(gray, 80%)
+
+.selected__player-action
+  absolute top 16px right 16px
+  width 45px
+  height 45px
+  display flex
+  justify-content flex-end
+  padding-top 8px
+  padding-right 8px
+
+  &:hover .icon
+    fill $accentColor
+    cursor pointer
+
+.selected__player-menu
+  flex 1
+  height 100%
+  overflow hidden
+  display flex
+  flex-direction column
+
+@media (min-width 901px)
+  .selected__player-header
+    .player__headshot
+      border-radius 0
+
+@media (max-width 800px)
+  .selected__player-header-section
+    justify-content center
+
+@media (max-width 900px)
+  .selected__player-header .player__headshot
+    margin 8px 0 0 8px
+
+@media (max-width 750px)
+  .selected__player-header
+    flex-wrap wrap
+    .player__name
+      padding 8px 0
+
+  .selected__player-header-section .MuiButton-root
+    font-size 9px
+
+  .selected__player-header-secondary
+    flex-basis 100%
+
+  .MuiButtonBase-root.selected__player-close
+    absolute top 16px right 0px

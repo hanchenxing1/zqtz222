@@ -1,0 +1,58 @@
+.player__name
+  display flex
+  align-items center
+  flex 1
+  min-width 0
+
+  .player__name-headshot
+    margin-right 8px
+    height 100%
+    display flex
+    align-items flex-end
+    .player__headshot:not(.square)
+      border-radius 0
+
+  &.large
+    .player__name-headshot
+      display flex
+      align-items flex-end
+
+.player__name-position
+  flex 0 0 34px
+  display flex
+
+.player__name-main
+  flex 1
+  overflow hidden
+  text-overflow ellipsis
+  line-height 20px
+  max-height 40px
+  &:hover
+    color $accentColor
+
+  span:first-child
+    padding-right 5px
+
+.player__name-label
+  flex 0 0 20px
+  display flex
+  align-items center
+
+.player__name-lead
+  flex 0 0 auto
+  display flex
+  flex-direction column
+  padding 8px 16px 0 24px
+  justify-content center
+
+.player__name-first
+  font-weight 400
+  text-transform uppercase
+
+.player__name-last
+  font-weight 600
+  font-size 2em
+  text-transform uppercase
+
+.player__name-meta .position
+  margin-right 8px

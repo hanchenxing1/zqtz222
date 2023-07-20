@@ -1,0 +1,39 @@
+# OSX
+#
+.DS_Store
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Yarn
+#
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# App specific
+#
+config.*.js
+key.pem
+cert.pem
+dist/*.worker.js*
+drive-credentials.json
+drive-token.json
+dist/stats.html
+*.sql
+*.tar.qz
+*.tar.gz
+tmp/*
+
+# Deployment
+current
+source
+.deploys
+tmp

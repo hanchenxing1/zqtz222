@@ -1,0 +1,48 @@
+.roster__item
+  display flex
+  align-items center
+  border-bottom 1px solid $borderColor
+  height 30px
+  padding 0 8px
+
+  .roster__item-action
+    display none
+
+  &.practice__signed
+    background lighten(yellow, 81%)
+
+  &.practice__drafted
+    background lighten(yellow, 92%)
+
+  &.reserve
+    background lighten(red, 92%)
+
+  &.selected
+    background lighten($accentColor, 85%)
+
+  &.starter
+    background white
+
+.roster__item-name
+  flex 1
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+  display flex
+  align-items center
+  padding-right 4px
+
+.roster__item-metric
+  flex 0 0 30px
+
+@media (pointer: fine)
+  .roster__item:hover
+    background white
+    .roster__item-action
+      display flex
+    .roster__item-salary
+    .player__name-label
+      display none
+
+    &.starter
+      background yellow

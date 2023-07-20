@@ -1,0 +1,119 @@
+$height = 50px
+
+.scoreboard__team
+  flex 1
+  overflow hidden
+
+.scoreboard__team-meta
+  height 60px
+  display flex
+  align-items center
+
+.scoreboard__team-banner
+  position relative
+  height $height
+
+.scoreboard__team-roster
+  background white
+  padding-bottom 16px
+
+.scoreboard__team-bench
+  padding-top 16px
+
+.scoreboard__team-score
+  display flex
+  flex-direction column
+  .score
+    font-size 1.5em
+  .projected
+    font-size 13px
+    font-weight 400
+    color rgba(0,0,0,0.5)
+    padding-top 4px
+
+.scoreboard__team-banner
+  position absolute
+  background-color $borderColor
+  width 25%
+  height $height
+  &:after
+    position absolute
+    content ""
+    top 0
+    background-color inherit
+    height 100%
+    width 100%
+
+.away
+  .team__image
+    margin-left 15%
+    order 1
+
+  .team__name
+    order 2
+
+  .scoreboard__team-meta
+    justify-content flex-end
+
+  .scoreboard__team-score
+    order 3
+    align-items flex-end
+
+  .scoreboard__team-banner
+    left 0
+    &:after
+      right -12px
+      transform skewX(20deg)
+
+  .scoreboard__team-head .team__name
+    padding-right 16px
+    padding-left 32px
+
+.home
+  .player__name-headshot
+    order 1
+    margin-left 8px
+    margin-right 0
+
+  .scoreboard__team-score
+    order 1
+
+  .team__name
+    order 2
+
+  .team__image
+    margin-right 15%
+    order 3
+
+  .scoreboard__team-banner
+    right 0
+    &:after
+      left -12px
+      transform skewX(-20deg)
+
+  .scoreboard__team-head .team__name
+    padding-left 16px
+    padding-right 32px
+
+.scoreboard__team-line
+  position absolute
+  bottom 0
+  height 3px
+  background-color $borderColor
+  left 0
+  right 0
+
+.scoreboard__team-head
+  position relative
+  height $height
+  display flex
+  align-items center
+  justify-content space-between
+
+  .team__name
+    white-space pre-wrap
+    overflow hidden
+    text-overflow ellipsis
+    display -webkit-box
+    -webkit-line-clamp 3
+    -webkit-box-orient vertical

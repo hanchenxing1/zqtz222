@@ -1,0 +1,28 @@
+.scoreboard__main
+  background #fafafa
+  display flex
+  align-items flex-start
+  border-radius 10px 10px 0 0
+  overflow hidden
+
+.scoreboard__empty
+  width 100%
+  height 100%
+  display flex
+  justify-content center
+  align-items center
+
+.scoreboard__bench
+  background #e0e0e0
+  padding 16px
+  border-radius 0 0 3px 3px
+  border-top 0
+  display flex
+  justify-content center
+
+  &:hover
+    color red
+
+@media (max-width 600px)
+  .scoreboard__bench
+    margin-bottom 32px
